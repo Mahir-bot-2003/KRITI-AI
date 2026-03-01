@@ -9,11 +9,77 @@ Kriti AI is an enterprise-grade artificial intelligence voice agent platform des
 ## Table of Contents
 
 - [Overview](#overview)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+  - [Environment Setup](#environment-setup)
+  - [Running the App](#running-the-app)
 - [Key Features](#key-features)
 - [Core Modules](#core-modules)
 - [Technology Stack](#technology-stack)
 - [Use Cases](#use-cases)
 - [Performance Metrics](#performance-metrics)
+
+---
+
+## Getting Started
+
+### Prerequisites
+
+- **Python 3.12+** installed on your machine
+- A [LiveKit Cloud](https://livekit.io/) account (or self-hosted LiveKit server)
+- A [Deepgram](https://deepgram.com/) account for Speech-to-Text
+- A [Google AI (Gemini)](https://ai.google.dev/) account for the LLM
+- A [Cartesia](https://cartesia.ai/) account for Text-to-Speech
+- A [Twilio](https://www.twilio.com/) account for SMS confirmations (optional but recommended)
+
+### Installation
+
+**Install dependencies**
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+### Environment Setup
+
+1. **Copy the example environment file**
+
+   ```bash
+   copy .env.example .env
+   ```
+
+2. **Open `.env` and fill in your API keys** — see [`.env.example`](.env.example) for all required and optional variables.
+
+### Running the App
+
+#### Quick Start 
+
+Run both the agent worker and web server together:
+
+```bash
+python simple_start.py
+```
+
+This will:
+- Start the **LiveKit Agent Worker** (voice AI backend)
+- Start the **Web Server** on `http://localhost:5000`
+- Open your browser and navigate to **http://localhost:5000** to start talking!
+
+
+**Terminal 2 — Admin Dashboard:**
+```bash
+python admin_view.py
+```
+
+Then open:
+- **Guest Interface:** http://localhost:5000
+- **Admin Dashboard:** http://localhost:5001/admin
+
+### Stopping the App
+
+- If using `simple_start.py`, press **Ctrl+C** in the terminal to stop all services.
+- If running separately, press **Ctrl+C** in each terminal window.
 
 ---
 
@@ -103,7 +169,6 @@ Kriti AI is an enterprise-grade artificial intelligence voice agent platform des
 - Reinforcement learning for negotiation strategy optimization
 - Predictive analytics for demand forecasting and personalization
 
-
 ### Data Management
 
 - Relational databases for transactional data
@@ -160,5 +225,9 @@ Meeting room booking, catering coordination, and attendee management with comple
 | Language Accuracy | 98.2% |
 
 ---
+
+## License
+
+This project is proprietary software. All rights reserved.
 
 
