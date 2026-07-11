@@ -1,4 +1,4 @@
-# Kriti AI - Intelligent Hotel Reservation and Management System
+# SARA-AI - Intelligent Hotel Reservation and Management System
 
 ## Overview
 
